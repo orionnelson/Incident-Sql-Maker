@@ -1,0 +1,34 @@
+name: Deploy Workflow
+
+on:
+  push:
+    branches:
+      - solution
+
+permissions:
+  contents: write
+
+jobs:
+  documentation:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v3
+      - name: Install Dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install make
+          python -m venv sdocs
+          source sdocs/bin/activate
+          python -m pip install -r requirements.txt
+      - name: Build Documentation
+        run: |
+          source sdocs/bin/activate
+          cd docs
+          make html
+          cd build/html
+          echo "I dislike Github Pages" >> .nojekyll
+      - name: Deploy Documentation
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          folder: ./docs/build/html # The folder the action should deploy.
