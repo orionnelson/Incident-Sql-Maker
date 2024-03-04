@@ -198,32 +198,49 @@
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">make_incident.</span></span><span class="sig-name descname"><span class="pre">IncidentManager</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">incident_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">description</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#make_incident.IncidentManager" title="Link to this definition">#</a></dt>
 <dd><p>Initialize the IncidentManager with the given incident name and description.
 The incident name is used as is, and the description is modified by replacing spaces with underscores
-and capitalizing the first letter of each word.
-:param incident_name: The name of the incident.
-:type incident_name: str
-:param description: A short description of the incident.
-:type description: str</p>
+and capitalizing the first letter of each word.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>incident_name</strong> (<em>str</em>) – The name of the incident.</p></li>
+<li><p><strong>description</strong> (<em>str</em>) – A short description of the incident.</p></li>
+</ul>
+</dd>
+</dl>
 <dl class="py method">
 <dt class="sig sig-object py" id="make_incident.IncidentManager.create_backups">
 <span class="sig-name descname"><span class="pre">create_backups</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">backup_count</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#make_incident.IncidentManager.create_backups" title="Link to this definition">#</a></dt>
-<dd><p>Create backup SQL templates based on user input.
-:param backup_count: The number of backups to create.
-:type backup_count: int
-:return: None</p>
+<dd><p>Create backup SQL templates based on user input.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>backup_count</strong> (<em>int</em>) – The number of backups to create.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>None</p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="make_incident.IncidentManager.create_structure">
 <span class="sig-name descname"><span class="pre">create_structure</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#make_incident.IncidentManager.create_structure" title="Link to this definition">#</a></dt>
-<dd><p>Create the directory and file structure for the incident.
-:return: None</p>
+<dd><p>Create the directory and file structure for the incident.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>None</p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="make_incident.IncidentManager.generate_header">
 <span class="sig-name descname"><span class="pre">generate_header</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#make_incident.IncidentManager.generate_header" title="Link to this definition">#</a></dt>
-<dd><p>Create the header for the top of the sql file that is used for the main script of the ticket.
-:return: str</p>
+<dd><p>Create the header for the top of the sql file that is used for the main script of the ticket.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
 </dd></dl>
 
 </dd></dl>
