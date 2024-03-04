@@ -5,6 +5,7 @@ class IncidentManager:
     Initialize the IncidentManager with the given incident name and description.
     The incident name is used as is, and the description is modified by replacing spaces with underscores
     and capitalizing the first letter of each word.
+    
     :param incident_name: The name of the incident.
     :type incident_name: str
     :param description: A short description of the incident.
@@ -32,6 +33,7 @@ class IncidentManager:
     def generate_header(self):
         """
         Create the header for the top of the sql file that is used for the main script of the ticket.
+        
         :return: str
         """
         sql_header  =f"""---------------------------------------------------
@@ -47,6 +49,7 @@ class IncidentManager:
     def create_structure(self) -> None:
         """
         Create the directory and file structure for the incident.
+        
         :return: None
         """
         original_dir_name = self.full_ticket
@@ -59,6 +62,7 @@ class IncidentManager:
     def create_backups(self, backup_count: int) -> None:
         """
         Create backup SQL templates based on user input.
+        
         :param backup_count: The number of backups to create.
         :type backup_count: int
         :return: None
